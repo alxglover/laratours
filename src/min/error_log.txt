@@ -1,0 +1,1 @@
+Minify_Cache_File: Write failed to 'C:\Users\alex\AppData\Local\Temp/minify_g=skypebuttonsjs_b41f5987faf740df116105e457c4f383'

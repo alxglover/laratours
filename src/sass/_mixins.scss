@@ -1,0 +1,31 @@
+@function calc-em($target-px, $context) {
+  @return ($target-px / $context) * 1em;
+}
+
+$base-margin-left: calc-em(10px, 32px);
+$base-margin-right: calc-em(10px, 32px);
+
+@mixin reset-pad-marg() {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+@mixin base-margins() {
+	@include reset-pad-marg();
+	margin-left: $base-margin-left;
+	margin-right: $base-margin-right;	
+}
+
+@mixin opacity-bg($col, $alpha) {
+	background-color: rgba($col, $alpha);
+}
+
+@mixin border-radius2($topleft, $topright, $bottomright, $bottomleft) {
+    -moz-border-radius: $topleft, $topright, $bottomright, $bottomleft;
+    -webkit-border-radius: $topleft $topright $bottomright $bottomleft;
+    border-radius: $topleft $topright $bottomright $bottomleft;
+}
+
+@function sum-px($px1, $px2) {
+  @return ($px1/($px1*0+1))+($px2/($px2*0+1))*1px;
+}

@@ -1,0 +1,15 @@
+<VirtualHost *:80>
+  ServerName laratours.local
+  DocumentRoot "C:/websites/laratours/src"
+
+  AddDefaultCharset UTF-8
+	
+  <Directory "C:/websites/laratours/src">
+    Options ExecCGI FollowSymLinks Indexes
+    AllowOverride all
+    Order allow,deny
+    Allow from all
+  </Directory>
+
+</VirtualHost>	
+		
