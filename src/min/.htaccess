@@ -1,0 +1,26 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+# You may need RewriteBase on some servers
+RewriteBase /min
+
+# rewrite URLs like "/min/f=..." to "/min/?f=..."
+RewriteRule ^([bfg]=.*)  index.php?$1 [L,NE]
+RewriteRule ^g/([a-z-]+)(\..+)?/([a-z-]+)$ index.php?g=$1&view=$3 [L,NE,QSA]
+RewriteRule ^g/([a-z-]+)(\..+)?$ index.php?g=$1 [L,NE,QSA]
+</IfModule>
+<IfModule mod_env.c>
+# In case AddOutputFilterByType has been added
+SetEnv no-gzip
+</IfModule>
+
+# cache skype js for a week
+<FilesMatch ".+g/skype.*\.js$">
+<IfModule mod_expires.c>
+ FileETag None
+ ExpiresActive on
+ ExpiresDefault "access plus 1 week" 
+ Header set Cache-Control "public"
+</IfModule>
+</FilesMatch>
+

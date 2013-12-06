@@ -1,0 +1,56 @@
+@include font-face("procionoregular", font-files("/fonts/Prociono-Regular-webfont.ttf", "fonts/Prociono-Regular-webfont.svg#procionoregular"), "fonts/Prociono-Regular-webfont.eot");
+
+//@include font-face("england_hand_dbregular", font-files("fonts/england-webfont.woff", "/fonts/england-webfont.ttf", "fonts/england-webfont.svg#england_hand_dbregular"), "fonts/england-webfont.eot", 'normal', 'normal');
+
+@font-face {
+    font-family: 'england_hand_dbregular';
+    src: url('/fonts/englandwebfont.eot');
+    src: url('/fonts/englandwebfont.eot?#iefix') format('embedded-opentype'), url('/fonts/englandwebfont.svg#england_hand_dbregular') format('svg'), url('/fonts/englandwebfont.woff') format('woff'), url('/fonts/englandwebfont.ttf') format('truetype');
+    font-weight: normal;
+}
+
+//@include font-face("gillsansmt", font-files("/fonts/33535gillsansmt.woff", "/fonts/33535gillsansmt.ttf"), "fonts/england-webfont.eot");
+
+@font-face {
+    font-family: 'gillsansmt';
+    src: url('/fonts/33535gillsansmt.eot');
+    src: url('/fonts/33535gillsansmt.eot?#iefix') format('embedded-opentype'), url('/fonts/33535gillsansmt.woff') format('woff'), url('/fonts/33535gillsansmt.ttf') format('truetype');
+    font-style: normal;
+}
+
+//@include font-face("liberationsansregular", font-files("/fonts/LiberationSans-Regular.ttf"), "fonts/LiberationSans-Regular.eot", 'normal', 'normal');
+
+@font-face {
+    font-family: 'liberationsansregular';
+    src: url('/fonts/LiberationSans-Regular-webfont.eot');
+    src: url('/fonts/LiberationSans-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/LiberationSans-Regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+//@include font-face("liberationsansregular", font-files("fonts/LiberationSans-Regular-webfont.woff", "/fonts/LiberationSans-Regular-webfont.ttf", "fonts/LiberationSans-Regular-webfont.svg#liberationsansregular"), "fonts/LiberationSans-Regular-webfont.eot", 'normal', 'normal');
+
+
+$font-stack: Arial, Helvetica, sans-serif; // for body
+
+$tabs-font: gillsansmt;
+$tabs-font-size: 1.0em;
+$content-font: gillsansmt;
+
+$logo-font: england_hand_dbregular;
+$subheading-font: liberationsansregular,gillsansmt,Arial;
+$subheading-font-size: 0.9em;
+
+$subnav-font-size: 0.9em;
+
+$maincontent-font-size: 1.1em;
+
+$quote-font-size: 0.9em;
+
+.wf-loading {
+    visibility:hidden;
+}
+
+.wf-availble {
+    visibility:normal;
+}

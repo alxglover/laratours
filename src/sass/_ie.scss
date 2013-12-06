@@ -1,0 +1,47 @@
+
+html.oldie {
+	body {
+		padding-bottom: 0px;
+		margin-bottom: 0px;
+
+		#header {
+			padding-bottom: 0px;
+
+			#subheading {
+				margin-bottom: 0px !important;
+			}
+
+			.logo {
+				top: 28px;
+			}
+		}
+
+		ul#mainnavtabs {
+			height: 30px;
+		}
+
+		#footer {
+			position: relative;
+			bottom: 0px;
+		}
+		#footer-mask {
+			margin-top: 40px;
+			position: relative;
+			bottom: 0px;			
+		}
+	}
+}
+
+html.oldie,html.ie8,html.ie9 {
+	body {
+		#maincontent {
+			.image-col {
+				img {
+					border: none;
+					@include border-radius(0);
+					@include single-box-shadow(#FFF, 0, 0, 0, 0, 0);											
+				}
+			}
+		}
+	}
+}

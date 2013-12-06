@@ -1,0 +1,447 @@
+﻿@import 'compass';
+@import 'mixins';
+@import 'colours';
+@import 'fonts';
+
+
+$footer-height: 40px;
+$footer-mask-height: 10px;
+$content-width: 900px;
+
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+body {
+	font-family: $font-stack;
+	background-color: $body-bg-color;
+	@include reset-pad-marg();
+	padding-bottom: sum-px($footer-height, 20px);
+	margin: 0 0 $footer-height; /* bottom = footer height */
+	
+	#pagewrapper {
+		width: $content-width;
+		margin: auto;
+		
+		h2 {
+			margin: 0px 0px 10px 0px;
+		}
+	}
+	
+	a {
+		color: $links-color;
+		text-decoration: none;
+	}
+	
+	a:hover {
+		text-decoration: underline;
+	}
+
+
+	#header {
+			position: fixed;
+			top: 0;
+			padding: 10px 2px 5px 2px;
+			width: 100%;
+			z-index: 2;
+			border-bottom: solid 1px $base-line-color;
+			background-color: $header-bg-color;
+
+			#headings {
+				padding-top: 20px;
+				width: 60%;
+				float: left;
+		
+				a#home {
+					text-decoration: none;
+				}
+
+				#logo-text {
+					@include reset-pad-marg();
+					height: 53px;
+					margin-left: 20px;
+					color: $base-line-color;
+					font-family: $logo-font;
+					font-size: 48px;
+					font-weight: bold;
+				}
+	
+				#subheading {
+					height: 24px;
+					margin: 0px 0px 4px 20px;
+					color: $subheading-font-color;
+					font-family: $subheading-font;
+					font-weight: normal;
+					font-size: $subheading-font-size;
+					
+					#subheading-text {
+						float: left;
+					}
+					
+					#sitelang {
+						float: right;
+
+						img, a {
+							height: inherit;
+							width: 24px;
+							border: 0;
+						}
+
+						span {
+							color: $links-color-2;
+							top: -8px;
+							padding-right: 4px;
+							position: relative;
+						}
+
+						small {
+							font-size: 0.7em;
+						}
+					}
+				}
+			
+			}
+
+			img.logo {
+				position: relative; 
+				//top: 1px;
+				top: 26px;
+				//@include opacity(0.8);
+				right: 30px;
+				float: right;
+				border: none;
+			}
+	}	
+	
+	#header-mask {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		height: 125px;
+		background-color: $header-bg-color;
+		border-bottom: $header-trim-bg-color 6px solid;
+	}
+	
+	ul#mainnavtabs.tabs {
+		@include base-margins();
+		
+		margin-top: 170px;
+
+		list-style: none;
+
+		height: 19px;
+
+		li.tab {
+			margin-right: 2px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			display: inline;
+			
+			background-color: none;
+			@include border-radius2(6px, 6px, 0, 0);
+			border-left: solid 1px $tabs-bg-color;				
+			border-top: solid 1px $tabs-bg-color;
+			border-right: solid 1px $tabs-bg-color;
+
+			a {
+				padding: 0px 16px 0px 16px;
+				color: $tabs-link-color;
+				font-family: $tabs-font;
+				font-size: $tabs-font-size;
+				font-weight: normal;
+				text-decoration: none;				
+			}			
+			
+			a:hover {
+				text-decoration: underline;
+				color: $tab-hover-font-color;
+			}
+		}
+		
+		li.tab.first {
+		}
+
+		li.tab.selected {
+			background-color: $tabs-bg-color;
+			a {
+				color: $tabs-font-color;
+			}
+		}
+		
+		li.tab.unselected {
+		    text-align:center;
+		
+		    background: rgba(0,0,0,0.25);
+		
+			@include box-shadow(
+		        inset 0 10px rgba(255,255,255,0.2), /* Top Light Shadow */
+		        inset 0 1px rgba(255,255,255,0.3), /* Top light Line */
+		        inset 0 10px 20px rgba(255,255,255,0.25), /* Sides Light Shadow */
+		        inset 0 -15px 30px rgba(0,0,0,0.3) /* Dark Background */
+			);
+		}
+	}
+	
+	#main-nav-tabs, #maincontent {
+		background-color: $tabs-bg-color;
+		//@include opacity($tabs-bg-color, 0.1);
+	}
+
+	#maincontent {
+		@include base-margins();
+		margin-top: 10px;
+		padding: 20px;
+		font-family: $content-font;
+		color: $content-font-color;
+		@include border-radius2(0px, 6px, 6px, 6px);
+
+		h3 {
+			@include reset-pad-marg();
+			padding: 0px 20px;
+			font-size: $maincontent-font-size;
+		}
+
+		p {
+			@include reset-pad-marg();
+			padding: 10px 20px;
+		}
+		
+		ul {
+			list-style-type: square;
+		}
+		
+		ul.level2 {
+			padding-left: 0px;
+			margin-left: 15px;
+			list-style-type: circle;
+			li {
+				font-weight: normal;
+			}
+		}
+		
+		ul.subnav {
+			@include reset-pad-marg();			
+			list-style: none;
+			margin-bottom: 20px;
+			padding: 8px 0px;
+			@include border-radius(4px);
+			background-color: $subnav-bg-color;
+
+			li {
+				font-size: $subnav-font-size;
+				padding: 0 10px;
+				display: inline;
+				border-left: solid 1px $subnav-line-color;
+				text-transform: uppercase;
+				color: $subnav-font-color;
+
+				a {
+					font-family: $tabs-font;
+					font-weight: normal;
+					text-decoration: none;
+				}			
+				
+				a:hover {
+					text-decoration: underline;
+				}
+			}
+			
+			li.first {
+				border-left: none;
+			}
+			
+			li.current span {
+				//font-weight: bold;
+				//text-decoration: underline;
+				border-bottom: solid 1px $subnav-line-color;
+			}
+		}
+		
+		.content-section {
+			padding: 10px;
+			@include border-radius(4px);
+			background-color: $content-section-bg-color;
+			
+			blockquote {
+				@include border-radius(4px);
+				background-color: #FFF;
+				font-size: $quote-font-size;
+				border-left: 0.5em solid #DDD;
+				@include single-box-shadow(rgba(0,0,0,0.5), 0, 0, 6px, 0.5);
+			}
+			
+			blockquote:before {
+				display: block;
+				height: 0;
+				content: "“";
+				margin-left: -.80em;
+				font: italic 400%/1 Cochin,Georgia,"Times New Roman", serif;
+				color: #999;
+			}
+
+		}
+		
+		.content-vertical-spacer {
+			height: 20px;
+		}
+		
+		.slim-col {
+			float: left;
+			width: 20%;	
+		}
+		
+		.larger-col {
+			float: left;
+			width: 60%;
+		}
+		
+		.med-col {
+			float: left;
+			width: 40%;
+		}
+		
+		.wide-col {
+			float: left;
+			width: 80%;	
+		}
+		
+		.image-col {
+			img {
+				width: 100%;
+				@include border-radius(4px);
+			}
+		}
+		.text-col {
+		}
+	}
+	
+	#guiding-content {		
+		.content-section li {
+			font-weight: bold;
+		}
+		
+		.content-section.locations {
+			//background-image: url(/images/uk_map.png);
+			background: $content-section-bg-color url(/images/uk_map.png) no-repeat scroll right center;
+		}
+		
+		@extend .clearfix;
+	}
+	
+	
+	#contact-content {	
+		#submit-message {
+			padding: 4px 10px 4px 10px;
+			margin: 20px 0px 20px 0px;
+			@include border-radius(8px);
+			//border-style: inset;
+			background-color: $submit-msg-bg-color;
+		
+			p {
+				@include reset-pad-marg();
+				font-family: $subheading-font;
+				font-weight: bold;
+				color: $subheading-font-color;
+			}
+		}
+	
+		p {
+			padding: 0px 0px 10px 0px; 
+		}
+	
+		label {
+			text-align: right;
+			display: block;
+			min-height: 38px;
+			padding-right: 20px;
+			padding-bottom: 4px;
+		}
+		
+		div.input {
+			min-height: 38px;
+			padding-bottom: 4px;
+
+			input.text {
+				width: 300px;
+			}
+			
+			textarea {
+				width: 100%;
+				height: 100px;
+			}			
+		}
+		
+		label.error {
+			color: #FFF;
+			background-color: $error-bg-color;
+		}
+		
+		div#validation-msg {
+			color: #FFF;
+			background-color: $error-bg-color;
+			margin-bottom: 10px;
+		}
+		
+		div.submit-buttons {
+			margin-top: 10px;
+		}
+	}
+	
+	.skype-call-button {
+		padding: 0px !important;
+		margin: 0px !important;
+		display: inline !important;
+
+		p {
+			padding: 0px !important;
+			margin: 0px !important;
+			display: inline !important;
+			vertical-align: -8px;
+		}
+		
+		img {
+			padding: 0px !important;
+			margin: 0px !important;					
+			vertical-align: 0 !important;
+		}
+	}
+	
+	#footer-mask {
+		position: absolute;
+		bottom: sum-px($footer-height, $footer-mask-height);
+		width: 100%;
+		height: $footer-mask-height;
+		background-color: $header-bg-color;
+	}
+	
+	#footer {
+		height: $footer-height;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		padding: 0 0 10px 0;
+		width: 100%;
+		border-top: solid 1px $base-line-color;
+		background-color: $header-bg-color;
+		text-align: center;
+		
+		#contactdetails {
+			padding-top: 10px;
+			font-family: $subheading-font;
+			color: $subheading-font-color;
+
+			a {
+				color: #CCC;
+				//font-family: $tabs-font;
+				font-weight: bold;
+				text-decoration: none;			
+			}
+			
+			a:hover {
+				color: $tab-hover-font-color;
+				text-decoration: underline;							
+			}			
+		}
+	}
+}
