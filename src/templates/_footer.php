@@ -57,6 +57,14 @@
 ?>
 
 <!--script src="/lib/lib.js.php?view=<?php echo $this->name; ?>"></script-->
-<script async="false" src="/min/g/libjs.js/<?php echo $this->name; ?>"></script>
+<?php 
+if ($CFG->isediting) { 
+?>
+<script async="false" src="/lib/lib.js.php?view=<?php echo $this->name . '&ts=' . time(); ?>"></script>
 <?php
+} else {
+?>
+<script async="false" src="/min/g/libjs.js/<?php echo $this->name; ?>"></script>
+<?php    
+}
 	require_once $CFG->libdir . '/tracking.php';
