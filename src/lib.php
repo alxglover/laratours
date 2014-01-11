@@ -4,7 +4,9 @@ require_once $CFG->libdir . '/textlib.class.php';
 require_once $CFG->libdir . '/viewfactory.php';
 
 /**
- *
+ * Create and return instance of the specified view class.
+ * @param  string $view
+ * @return object 
  */
 function loadView($view) {
 	$view_path = getViewPath($view);
@@ -22,7 +24,7 @@ function loadView($view) {
 		showError($e);
 		return false;
 	}
-	
+
 	//$view_obj = $view_class::getInstance();
 	//$view_obj = call_user_func(array($view_class, 'getInstance')); // PHP 5.2 workaround
 	$view_obj = ViewFactory::getInstance($view_class);
@@ -32,9 +34,10 @@ function loadView($view) {
 }
 
 /**
- * 
- * @param unknown $view
- * @param unknown $template
+ * Sets the specified template on the view object provided and causes the template to render html output.
+ * @param  string $view Name of the view class e.g. 'guiding'
+ * @param  string $template Name of the template (defaults to 'main')
+ * @return void
  */
 function renderView($view, $template='main') {
 	
@@ -56,8 +59,8 @@ function renderView($view, $template='main') {
 }
 
 /**
- * 
- * @param unknown $view
+ * Get the fully-qualified class name for the specified view, e.g. guiding -> GuidingView
+ * @param  string $view e.g. 'guiding'
  * @throws NoSuchViewException
  * @return string
  */
@@ -150,7 +153,11 @@ function fetchContents($content_names, $lang='en') {
 }
 
 /**
- *
+ * Saves lang file contents 
+ * @param  string $content_name Name corresponding to lang file
+ * @param  string $lang e.g. 'en'
+ * @param  array $contents array of key/value pairs
+ * @return boolean whether the contents were saved successfully
  */
 function saveContents($content_name, $lang, $contents) {
 	//echo __METHOD__ . "($content_name, $lang, [contents])\n";//TMP
