@@ -63,6 +63,7 @@ MSG_HTML;
 							<input type="submit" name="submit" value="<?php $this->ps('formsubmit'); ?>" />
 						</div>
 					</div>
+					<div style="clear: both;"></div>							
 				</form>
 			</div>
 			<div style="clear: both;"></div>			

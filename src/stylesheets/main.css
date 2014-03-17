@@ -430,31 +430,35 @@ body {
       font-weight: bold;
       color: #f20056;
       text-align: center; }
+  body #contact-content form#contactform {
+    background-color: #e5e7e1;
+    position: relative;
+    z-index: 4; }
+    body #contact-content form#contactform label {
+      text-align: right;
+      display: block;
+      min-height: 38px;
+      padding-right: 20px;
+      padding-bottom: 4px; }
+    body #contact-content form#contactform div.input {
+      min-height: 38px;
+      padding-bottom: 4px; }
+      body #contact-content form#contactform div.input input.text {
+        width: 300px; }
+      body #contact-content form#contactform div.input textarea {
+        width: 100%;
+        height: 100px; }
+    body #contact-content form#contactform label.error {
+      color: #FFF;
+      background-color: #f20056; }
+    body #contact-content form#contactform div#validation-msg {
+      color: #FFF;
+      background-color: #f20056;
+      margin-bottom: 10px; }
+    body #contact-content form#contactform div.submit-buttons {
+      margin-top: 10px; }
   body #contact-content p {
     padding: 0px 0px 10px 0px; }
-  body #contact-content label {
-    text-align: right;
-    display: block;
-    min-height: 38px;
-    padding-right: 20px;
-    padding-bottom: 4px; }
-  body #contact-content div.input {
-    min-height: 38px;
-    padding-bottom: 4px; }
-    body #contact-content div.input input.text {
-      width: 300px; }
-    body #contact-content div.input textarea {
-      width: 100%;
-      height: 100px; }
-  body #contact-content label.error {
-    color: #FFF;
-    background-color: #f20056; }
-  body #contact-content div#validation-msg {
-    color: #FFF;
-    background-color: #f20056;
-    margin-bottom: 10px; }
-  body #contact-content div.submit-buttons {
-    margin-top: 10px; }
   body .skype-call-button {
     padding: 0px !important;
     margin: 0px !important;

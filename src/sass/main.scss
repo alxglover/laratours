@@ -549,46 +549,52 @@ body {
 			}
 		}
 	
-		p {
-			padding: 0px 0px 10px 0px; 
-		}
-	
-		label {
-			text-align: right;
-			display: block;
-			min-height: 38px;
-			padding-right: 20px;
-			padding-bottom: 4px;
-		}
-		
-		div.input {
-			min-height: 38px;
-			padding-bottom: 4px;
+		form#contactform {
+			background-color: $tabs-bg-color;
+			position:relative;
+			z-index: 4;
 
-			input.text {
-				width: 300px;
+			label {
+				text-align: right;
+				display: block;
+				min-height: 38px;
+				padding-right: 20px;
+				padding-bottom: 4px;
 			}
 			
-			textarea {
-				width: 100%;
-				height: 100px;
-			}			
+			div.input {
+				min-height: 38px;
+				padding-bottom: 4px;
+
+				input.text {
+					width: 300px;
+				}
+				
+				textarea {
+					width: 100%;
+					height: 100px;
+				}			
+			}
+			
+			label.error {
+				color: #FFF;
+				background-color: $error-bg-color;
+			}
+			
+			div#validation-msg {
+				color: #FFF;
+				background-color: $error-bg-color;
+				margin-bottom: 10px;
+			}
+			
+			div.submit-buttons {
+				margin-top: 10px;
+			}
 		}
-		
-		label.error {
-			color: #FFF;
-			background-color: $error-bg-color;
-		}
-		
-		div#validation-msg {
-			color: #FFF;
-			background-color: $error-bg-color;
-			margin-bottom: 10px;
-		}
-		
-		div.submit-buttons {
-			margin-top: 10px;
-		}
+	
+		p {
+			padding: 0px 0px 10px 0px; 
+		}	
 	}
 	
 	.skype-call-button {
