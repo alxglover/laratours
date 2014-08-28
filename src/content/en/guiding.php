@@ -8,7 +8,7 @@ $content = array(
 		<a title="What the Blue Bage means" target="_blank" href="http://www.aptg.org.uk/badge.html">
 			<img alt="Blue Badge" class="textwrap-left" src="/images/bluebadge_large.png" />						
 		</a>
-		<p itemscope itemtype="http://data-vocabulary.org/Person" id="owner" itemref="ownerphoto">I am <span itemprop="name">Lara</span>, a registered <a title="Lara\'s official BBG profile" target="_blank" href="http://www.touristguides.org.uk/profile?id=737">Blue Badge Guide</a> 
+		<p itemscope itemtype="http://data-vocabulary.org/Person" id="owner" itemref="ownerphoto">I am <span itemprop="name">Lara</span>, a registered <a title="Lara\'s official BBG profile" target="_blank" href="http://www.guidelondon.org.uk/find-a-guide?guide_id=174#guideInfo">Blue Badge Guide</a> 
 		and experienced English/Italian tour leader. I have been working as a <span itemprop="jobTitle">guide, interpreter and tour leader</span> for over 10 years. I\'m available for <a href="/tourorganising">tour operators</a> seeking a guide for an extensive travel itinerary and for smaller groups wanting a few days personalised city guiding. I will be delighted to help you to fully enjoy your experience. 		
 		<meta itemprop="founder" itemscope itemref="laratours" content="laratours">
 		<meta itemprop="affiliation" content="Blue Badge Guides - London/UK">

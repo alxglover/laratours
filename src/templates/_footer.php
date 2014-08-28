@@ -53,7 +53,8 @@
 <script async="false" src="/lib/jquery.corner.min.js"></script>
 
 <?php // skype buttons
-	require_once dirname(__FILE__) . '/_skype.php';				
+    // currently buggy
+	//require_once dirname(__FILE__) . '/_skype.php';				
 ?>
 
 <!--script src="/lib/lib.js.php?view=<?php echo $this->name; ?>"></script-->

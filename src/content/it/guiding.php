@@ -6,7 +6,7 @@ $content = array(
 	'maincontent' => '
 		<h3>Benvenuti!</h3>
 		<img alt="Blue Badge" class="textwrap-left" src="/images/bluebadge_large.png" />
-		<p itemscope itemtype="http://data-vocabulary.org/Person" id="owner" itemref="ownerphoto">Sono <span itemprop="name">Lara</span>, una guida <a title="Lara\'s official BBG profile" target="_blank" href="http://www.touristguides.org.uk/profile?id=737"><span itemprop="affiliation">Blue Badge</span></a> qualificata al LTB (London Tourist Board) e tour manager bilingue in Inglese/Italiano. Ho lavorato come <span itemprop="jobTitle">guida, interprete e tour manager</span> per oltre dieci anni. 
+		<p itemscope itemtype="http://data-vocabulary.org/Person" id="owner" itemref="ownerphoto">Sono <span itemprop="name">Lara</span>, una guida <a title="Lara\'s official BBG profile" target="_blank" href="http://www.guidelondon.org.uk/find-a-guide?guide_id=174#guideInfo"><span itemprop="affiliation">Blue Badge</span></a> qualificata al LTB (London Tourist Board) e tour manager bilingue in Inglese/Italiano. Ho lavorato come <span itemprop="jobTitle">guida, interprete e tour manager</span> per oltre dieci anni. 
 		Sono disponibile per <a href="/tourorganising">le agenzie di viaggi</a> che cercano una guida per un ampio itinerario di viaggio e per i gruppi piu piccoli che vogliono alcuni giorni di tour personalizzati. Sarò lieta di aiutarvi a godere appieno la vostra esperienza. 		
 		<meta itemprop="founder" itemscope itemref="laratours" content="laratours">
 		<meta itemprop="affiliation" content="Guida Blue Badge - Londra/Gran Bretagna">

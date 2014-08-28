@@ -6,6 +6,7 @@
  * @package Minify
  */
 
+$min_cachePath = dirname(__FILE__) . '/cache';
 
 /**
  * Allow use of the Minify URI Builder app. Only set this to true while you need it.

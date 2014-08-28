@@ -30,6 +30,8 @@ class Minify_Cache_File {
             ? LOCK_EX
             : null;
         $file = $this->_path . '/' . $id;
+        //$file = str_replace('minify_g=', '', $file);//TMP
+        //exit($data);//TMP
         if (! @file_put_contents($file, $data, $flag)) {
             $this->_log("Minify_Cache_File: Write failed to '$file'");
         }
@@ -51,7 +53,10 @@ class Minify_Cache_File {
      */
     public function getSize($id)
     {
-        return filesize($this->_path . '/' . $id);
+        $file = $this->_path . '/' . $id;
+        //$file = str_replace('minify_g=', '', $file);//TMP
+        return filesize($file);
+    	//return filesize($this->_path . '/' . $id);
     }
     
     /**
@@ -96,15 +101,19 @@ class Minify_Cache_File {
      */
     public function fetch($id)
     {
-        if ($this->_locking) {
-            $fp = fopen($this->_path . '/' . $id, 'rb');
+        $file = $this->_path . '/' . $id;
+        //$file = str_replace('minify_g=', '', $file);//TMP        	     
+    	if ($this->_locking) {
+    		//$fp = fopen($this->_path . '/' . $id, 'rb');
+            $fp = fopen($file, 'rb');
             flock($fp, LOCK_SH);
             $ret = stream_get_contents($fp);
             flock($fp, LOCK_UN);
             fclose($fp);
             return $ret;
         } else {
-            return file_get_contents($this->_path . '/' . $id);
+        	return file_get_contents($file);
+            //return file_get_contents($this->_path . '/' . $id);
         }
     }
     

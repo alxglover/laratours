@@ -7,5 +7,5 @@
 
 	header('Content-Type: text/javascript'); // send javascript header
 
-	echo $skype_api_js;
+//	echo $skype_api_js; // the skype script is bugged
 	

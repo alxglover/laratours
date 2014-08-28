@@ -30,6 +30,7 @@
 						if (typeof f !== 'undefined') {
 							Element.prototype.appendChild = f; // restore original function
 							//console.log('restored appendChild');//TMP
+							//console.log(Element.prototype.appendChild);//TMP
 						}
 
 						//console.log('decorating skype buttons');//TMP

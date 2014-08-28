@@ -24,6 +24,7 @@ $minify_groups_config = array(
 		    )
 		)),
 	// skype buttons js
+	// currently buggy - @todo - fix this
 	'skypebuttonsjs' => 
 		new Minify_Source(array(
 		    'id' => 'skypebuttonsjs',
@@ -41,7 +42,8 @@ $minify_groups_config = array(
 		new Minify_Source(array(
 		    'id' => 'skypejs',
 		    'getContentFunc' => function() {
-		        $js_content = file_get_contents('http://cdn.dev.skype.com/uri/skype-analytics.js');
+		    	$js_content = file_get_contents('http://www.skypeassets.com/i/scom/js/skype-analytics.js');
+		        //$js_content = file_get_contents('http://cdn.dev.skype.com/uri/skype-analytics.js');
 		        return $js_content;
 		    },
 		    'contentType' => Minify::TYPE_JS,

@@ -184,6 +184,8 @@ body {
     padding: 0px 0px 0px 0px;
     margin-left: 0.3125em;
     margin-right: 0.3125em;
+    position: relative;
+    z-index: 1;
     margin-top: 170px;
     list-style: none;
     height: 19px; }
@@ -238,7 +240,9 @@ body {
     padding: 0px 0px 0px 0px;
     margin-left: 0.3125em;
     margin-right: 0.3125em;
-    margin-top: 10px;
+    position: relative;
+    z-index: 2;
+    margin-top: 9px;
     padding: 20px;
     font-family: gillsansmt;
     color: #444444;
@@ -279,7 +283,7 @@ body {
       background: repeating-linear-gradient(-45deg, #aaaaaa, #aaaaaa 160px, #bbbbbb 160px, #bbbbbb 320px);
       background: -webkit-repeating-linear-gradient(-45deg, #aaaaaa, #aaaaaa 160px, #bbbbbb 160px, #bbbbbb 320px); }
       body #maincontent ul.subnav li {
-        font-size: 0.9em;
+        font-size: 1em;
         padding: 0 10px;
         display: inline;
         border-left: solid 1px #777777;
@@ -395,7 +399,9 @@ body {
   body #guiding-content .content-section li {
     font-weight: bold; }
   body #guiding-content .content-section.locations {
-    background: #eeeeee url(/images/uk_map.gif) no-repeat scroll right center; }
+    background: #eeeeee url(/images/uk_map.gif) no-repeat scroll right center;
+    padding-top: 20px;
+    padding-bottom: 20px; }
   body #walkingtours-content .wide-col {
     width: 75%; }
   body #walkingtours-content .slim-col {

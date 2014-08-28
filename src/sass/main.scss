@@ -187,6 +187,9 @@ body {
 	ul#mainnavtabs.tabs {
 		@include base-margins();
 		
+		position: relative;
+		z-index: 1;
+
 		margin-top: 170px;
 
 		list-style: none;
@@ -270,7 +273,11 @@ body {
 
 	#maincontent {
 		@include base-margins();
-		margin-top: 10px;
+
+		position: relative;
+		z-index: 2;
+
+		margin-top: 9px;
 		padding: 20px;
 		font-family: $content-font;
 		color: $content-font-color;
@@ -493,6 +500,8 @@ body {
 		.content-section.locations {
 			//background-image: url(/images/uk_map.png);
 			background: $content-section-bg-color url(/images/uk_map.gif) no-repeat scroll right center;
+			padding-top: 20px;
+			padding-bottom: 20px;
 		}
 		
 		@extend .clearfix;
