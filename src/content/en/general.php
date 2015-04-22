@@ -18,6 +18,7 @@ $content = array(
 	'metadata_description' => 'Lara Tours provides expert (Blue Badge) tour guiding, tour organising and interpreter services in English and Italian.',
 	'laraglover' => 'Lara Glover',
 	'laratours' => 'Lara Tours',
+	'laratourstitle' => 'Lara Tours (Qualified London Guide)',
 	'laragloverguide' => 'Lara Glover Guide',
 	'mainsubheading' => '<a href="/guiding">TOUR GUIDE</a> - 
 						 <a href="/tourorganising">TOUR ORGANISER</a> - 

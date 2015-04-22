@@ -21,8 +21,8 @@
 <html dir="ltr" class="other-browser" lang="<?php echo $lang; ?>">
 <!--<![endif]-->
 	<head itemscope itemtype="http://schema.org/Organization" id="laratours" itemref="contactdetails">
-		<title><?php $this->ps('laratours', 'general', true); ?> - <?php echo $pagetitle; ?></title>
-		<meta itemprop="name" content="<?php $this->ps('laratours', 'general', true); ?>">
+		<title><?php $this->ps('laratourstitle', 'general', true); ?> - <?php echo $pagetitle; ?></title>
+		<meta itemprop="name" content="<?php $this->ps('laratourstitle', 'general', true); ?>">
 
 		<meta charset="utf-8">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
