@@ -18,7 +18,7 @@ $content = array(
 	'metadata_description' => 'Lara Tours offre servizi di guida turistica esperta (Blue Badge), organizzazione di tours e servizio di interprete in Inglese e Italiano',
 	'laraglover' => 'Lara Glover',
 	'laratours' => 'Lara Tours',
-	'laratourstitle' => 'Lara Tours (Guida Qualificata per Londra)',
+	'laratourstitle' => 'Lara Tours (Guida Italiana, Qualificata di Londra)',
 	'laragloverguide' => 'Lara Glover Guida',
 	'mainsubheading' => '<a href="/guiding">GUIDA TURISTICA</a> - <a href="/tourorganising">TOUR MANAGER</a> - INTERPRETE<a href="/interpreting"></a>',
 	'guiding' => 'Servizi di guida',
