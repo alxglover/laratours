@@ -28,7 +28,10 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta name="keywords" content="<?php $this->ps('metadata_keywords', 'general'); ?>, <?php $this->ps('metadata_keywords'); ?>">
 		<meta name="description" content="<?php $this->ps('metadata_description', 'general'); ?>">
-		<meta itemprop="description" content="<?php $this->ps('metadata_description', 'general'); ?>">		
+		<meta itemprop="description" content="<?php $this->ps('metadata_description', 'general'); ?>">	
+		<?php // output hreflang alternate urls
+			echo getAlternateLangsHeaderForCurrentPage($lang);
+		?>
 		<link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
 		<?php // force inlining of CSS - helps pagespeed

@@ -684,6 +684,29 @@ function make_upload_directory($directory, $shownotices=true) {
 	return $currdir;
 }
 
+function getAlternateLangsHeaderForCurrentPage($currentlang) {
+
+	$out = '';
+
+	$supported_langs = array(
+		'en' => 'laratours.co.uk', 
+		'it' => 'laratours.it'
+	);
+
+	$self = $_SERVER['REQUEST_URI'];
+	$self = preg_replace('/\.php$/', '', $self);
+
+	foreach ($supported_langs as $lang => $domain) {
+		//if ($lang == $currentlang) {
+		//	continue;
+		//}
+		$alternateurl = $self;
+		$out .= '<link rel="alternate" hreflang="'.$lang.'" href="http://'.$domain.$alternateurl.'" />'."\n";
+	}
+
+	return $out;
+}
+
 
 /* Exceptions */
 
