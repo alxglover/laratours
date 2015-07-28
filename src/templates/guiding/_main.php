@@ -8,7 +8,9 @@
 						<?php $this->ps('maincontent'); ?>
 					</div>
 					<div class="col right slim-col image-col rounded">
-						<img alt="Photo of Lara Glover" id="ownerphoto" itemprop="photo" src="/images/lara_photo3.jpg" />
+						<a title="<?php $this->ps('larabbgprofile'); ?>" target="_blank" href="http://www.guidelondon.org.uk/find-a-guide?guide_id=174#guideInfo">
+							<img alt="Photo of Lara Glover" id="ownerphoto" itemprop="photo" src="/images/lara_photo4.jpg" />
+						</a>
 						<div class="content-vertical-spacer" style="clear: both;"></div>
 						<img alt="Big Ben and Tube sign" src="/images/tube_bigben8.jpg" title="Big Ben (CC BY-SA 2.0)" />
 						<small class="copy smaller">© <a target="_blank" href="http://www.flickr.com/photos/myoplayer/4849123474/">gωen</a></small>						

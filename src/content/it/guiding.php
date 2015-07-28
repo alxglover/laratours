@@ -1,6 +1,7 @@
 <?php
 
 $content = array(
+	'larabbgprofile' => 'Clicca qui per il profilo ufficiale BBG di Lara',
 	'metadata_keywords' => '',
 	'sectiontitle' => 'Servizi di guida',
 	'maincontent' => '
