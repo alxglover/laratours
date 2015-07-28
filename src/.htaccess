@@ -1,3 +1,6 @@
+
+AddDefaultCharset UTF-8
+
 ##
 #
 # Custom 404 error page
@@ -128,6 +131,16 @@ AddType 'application/javascript; charset=UTF-8' map
 </IfModule>
 </FilesMatch>
 
+
+<FilesMatch "analytics\.js$">
+<IfModule mod_expires.c>
+ FileETag None
+ ExpiresActive on
+ ExpiresDefault "access plus 1 week" 
+ Header set Cache-Control "public"
+</IfModule>
+</FilesMatch>
+
 # css
 <FilesMatch "\.(css)$">
 <IfModule mod_expires.c>
@@ -137,6 +150,17 @@ AddType 'application/javascript; charset=UTF-8' map
  Header set Cache-Control "public"
 </IfModule>
 </FilesMatch>
+
+<FilesMatch "\.custom\.min\.css$">
+<IfModule mod_expires.c>
+ FileETag None
+ ExpiresActive on
+ ExpiresDefault "access plus 1 week" 
+ Header set Cache-Control "public"
+</IfModule>
+</FilesMatch>
+
+
 
 #
 # TMP - Force JS to be non-cached

@@ -24,3 +24,11 @@ SetEnv no-gzip
 </IfModule>
 </FilesMatch>
 
+<FilesMatch ".+g/libjs\.js">
+<IfModule mod_expires.c>
+ FileETag None
+ ExpiresActive on
+ ExpiresDefault "access plus 30 minutes" 
+ Header set Cache-Control "public"
+</IfModule>
+</FilesMatch>
